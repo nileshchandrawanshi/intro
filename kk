@@ -1,1 +1,5 @@
-This document outlines the CI/CD workflow for building, testing, and deploying APIs and web applications. The process includes creating Docker images and DACPAC files, using Dockerfiles, and pushing them to Azure Container Registry and Azure Artifact. Deployment pipelines then deploy these images to Azure App Service and manage SQL Server DACPAC deployments. Integrated tools like SonarCloud and Snyk ensure code quality and security by performing checks during pull request merges. Akeyless manages credential storage, and different branches are used for environment-specific deployments to streamline and secure the entire development lifecycle.
+Regression Testing in CI Pipeline:
+
+Triggering Tests: Regression tests are automatically initiated when a pull request (PR) is created or merged into the develop branch, ensuring continuous validation of code changes.
+Ensuring Stability: These tests verify that recent updates do not disrupt existing functionality, maintaining application stability throughout development.
+Integration with CI: The regression tests are integrated into the CI pipeline, allowing for immediate feedback and quick identification of issues before deployment to further environments.
